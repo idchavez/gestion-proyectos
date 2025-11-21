@@ -1,0 +1,10 @@
+/target/
+/build/
+
+application.properties
+application.yml
+*.db
+
+# Archivos de entorno
+.env
+.env.*
