@@ -1,0 +1,25 @@
+  type UsuarioDTO {
+    _id: ID
+    correo: String
+    identificacion: String
+    nombre: String
+    apellido: String
+}
+
+input UsuarioInput {
+    correo: String!
+    identificacion: String!
+    nombre: String!
+    apellido: String!
+}
+
+type Query {
+    obtenerUsuarios: [UsuarioDTO]
+    obtenerPorId(id: ID!): UsuarioDTO
+}
+
+type Mutation {
+    crearUsuario(input: UsuarioInput!): UsuarioDTO
+    actualizarUsuario(id: ID!, input: UsuarioInput!): UsuarioDTO
+    eliminarUsuario(id: ID!): Boolean
+}
